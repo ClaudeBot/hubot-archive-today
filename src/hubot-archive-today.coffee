@@ -23,5 +23,9 @@ module.exports = (robot) ->
             .header("content-type", "application/x-www-form-urlencoded")
             .post(data) (err, res, body) ->
                 robot.logger.debug body
+
+                if err or body.match(/Invalid URL:/i)
+                    return msg.reply "#{msg.match[1]} is not a valid URL."
+
                 links = body.match /https:\/\/archive.today\/.{5}/i
                 msg.reply links[0]
