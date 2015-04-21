@@ -9,11 +9,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-hubot-archive-today.git"
+    "url": "git://github.com/ClaudeBot/hubot-archive-today.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-hubot-archive-today/issues"
+    "url": "https://github.com/ClaudeBot/hubot-archive-today/issues"
   },
 
   "dependencies": {
