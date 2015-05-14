@@ -17,6 +17,10 @@
 ARCHIVE_TODAY_SUBMIT_URL = "https://archive.today/submit/"
 
 module.exports = (robot) ->
+    PATTERNS =
+        FOUND: /https:\/\/archive.is\/.{5}/i
+        NOT_FOUND: /Invalid URL:/i
+
     robot.respond /archive (.+)/i, (msg) ->
         data = "url=#{msg.match[1]}"
         msg.http(ARCHIVE_TODAY_SUBMIT_URL)
@@ -24,8 +28,8 @@ module.exports = (robot) ->
             .post(data) (err, res, body) ->
                 robot.logger.debug body
 
-                if err or body.match(/Invalid URL:/i)
+                if err or body.match(PATTERNS.NOT_FOUND)
                     return msg.reply "#{msg.match[1]} is not a valid URL."
 
-                links = body.match /https:\/\/archive.today\/.{5}/i
+                links = body.match PATTERNS.FOUND
                 msg.reply links[0]
