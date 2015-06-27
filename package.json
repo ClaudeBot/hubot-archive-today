@@ -1,7 +1,7 @@
 {
   "name": "hubot-archive-today",
   "description": "A Hubot script for archiving the contents of a URL on Archive.today.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Ian Lai <MrSaints@users.noreply.github.com>",
   "license": "MIT",
 
