@@ -1,26 +1,42 @@
 # hubot-archive-today
 
+[![Build Status](https://travis-ci.org/ClaudeBot/hubot-archive-today.svg)](https://travis-ci.org/ClaudeBot/hubot-archive-today)
+[![devDependency Status](https://david-dm.org/ClaudeBot/hubot-archive-today/dev-status.svg)](https://david-dm.org/ClaudeBot/hubot-archive-today#info=devDependencies)
+
 A Hubot script for archiving the contents of a URL on Archive.today.
 
 See [`src/hubot-archive-today.coffee`](src/hubot-archive-today.coffee) for full documentation.
 
-## Installation
 
-In hubot project repo, run:
+## Installation via NPM
 
-`npm install hubot-archive-today --save`
+1. Install the __hubot-archive-today__ module as a Hubot dependency by running:
 
-Then add **hubot-archive-today** to your `external-scripts.json`:
+    ```
+    npm install --save hubot-archive-today
+    ```
 
-```json
-[
-  "hubot-archive-today"
-]
-```
+2. Enable the module by adding the __hubot-archive-today__ entry to your `external-scripts.json` file:
+
+    ```json
+    [
+        "hubot-archive-today"
+    ]
+    ```
+
+3. Run your bot and see below for available config / commands
+
+
+## Commands
+
+Command | Description
+--- | ---
+hubot archive `url` | Archives the contents of `url` and returns the Archive.today link
+
 
 ## Sample Interaction
 
 ```
 user1>> hubot archive https://www.google.com/
-hubot>> https://archive.today/baTKw
+hubot>> user1: https://archive.today/baTKw
 ```
