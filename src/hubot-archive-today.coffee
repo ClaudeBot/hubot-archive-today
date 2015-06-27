@@ -21,15 +21,15 @@ module.exports = (robot) ->
         FOUND: /https:\/\/archive.is\/.{5}/i
         NOT_FOUND: /Invalid URL:/i
 
-    robot.respond /archive (.+)/i, (msg) ->
-        data = "url=#{encodeURIComponent(msg.match[1])}"
-        msg.http(ARCHIVE_TODAY_SUBMIT_URL)
+    robot.respond /archive (.+)/i, (res) ->
+        data = "url=#{encodeURIComponent(res.match[1])}"
+        res.http(ARCHIVE_TODAY_SUBMIT_URL)
             .header("content-type", "application/x-www-form-urlencoded")
-            .post(data) (err, res, body) ->
-                robot.logger.debug body
+            .post(data) (err, httpRes, body) ->
+                robot.logger.debug "hubot-archive-today: #{body}"
 
                 if err or body.match(PATTERNS.NOT_FOUND)
-                    return msg.reply "#{msg.match[1]} is not a valid URL."
+                    return res.reply "#{res.match[1]} is not a valid URL."
 
                 links = body.match PATTERNS.FOUND
-                msg.reply links[0]
+                res.reply links[0]
