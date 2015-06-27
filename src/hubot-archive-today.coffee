@@ -22,7 +22,7 @@ module.exports = (robot) ->
         NOT_FOUND: /Invalid URL:/i
 
     robot.respond /archive (.+)/i, (msg) ->
-        data = "url=#{msg.match[1]}"
+        data = "url=#{encodeURIComponent(msg.match[1])}"
         msg.http(ARCHIVE_TODAY_SUBMIT_URL)
             .header("content-type", "application/x-www-form-urlencoded")
             .post(data) (err, res, body) ->
