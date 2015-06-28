@@ -28,7 +28,11 @@ module.exports = (robot) ->
             .post(data) (err, httpRes, body) ->
                 robot.logger.debug "hubot-archive-today: #{body}"
 
-                if err or body.match(PATTERNS.NOT_FOUND)
+                if err or httpRes.statusCode isnt 200
+                    res.reply "I'm unable to process your request at this time due to a server error. Please try again later."
+                    return robot.logger.error "hubot-archive-today: #{err}"
+
+                if body.match(PATTERNS.NOT_FOUND)
                     return res.reply "#{res.match[1]} is not a valid URL."
 
                 links = body.match PATTERNS.FOUND
