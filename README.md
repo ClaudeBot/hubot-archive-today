@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/ClaudeBot/hubot-archive-today.svg)](https://travis-ci.org/ClaudeBot/hubot-archive-today)
 [![devDependency Status](https://david-dm.org/ClaudeBot/hubot-archive-today/dev-status.svg)](https://david-dm.org/ClaudeBot/hubot-archive-today#info=devDependencies)
 
-A Hubot script for archiving the contents of a URL on Archive.today.
+A Hubot script for archiving the contents of a URL on [Archive.today](http://archive.is/).
 
 See [`src/hubot-archive-today.coffee`](src/hubot-archive-today.coffee) for full documentation.
 
