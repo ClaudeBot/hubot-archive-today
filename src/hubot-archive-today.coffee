@@ -21,7 +21,7 @@ module.exports = (robot) ->
         FOUND: /https:\/\/archive.is\/.{5}/i
         NOT_FOUND: /Invalid URL:/i
 
-    robot.respond /archive (.+)/i, (res) ->
+    robot.respond /archive (.+)/i, id: "archive.new", (res) ->
         data = "url=#{encodeURIComponent(res.match[1])}&anyway=1"
         res.http(ARCHIVE_TODAY_SUBMIT_URL)
             .header("content-type", "application/x-www-form-urlencoded")

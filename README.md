@@ -29,9 +29,9 @@ See [`src/hubot-archive-today.coffee`](src/hubot-archive-today.coffee) for full 
 
 ## Commands
 
-Command | Description
---- | ---
-hubot archive `url` | Archives the contents of `url` and returns the Archive.today link
+Command | Listener ID | Description
+--- | --- | ---
+hubot archive `url` | `archive.new` | Archives the contents of `url` and returns the Archive.today link
 
 
 ## Sample Interaction
