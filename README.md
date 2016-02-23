@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/ClaudeBot/hubot-archive-today.svg)](https://travis-ci.org/ClaudeBot/hubot-archive-today)
 [![devDependency Status](https://david-dm.org/ClaudeBot/hubot-archive-today/dev-status.svg)](https://david-dm.org/ClaudeBot/hubot-archive-today#info=devDependencies)
 
-A Hubot script for archiving the contents of a URL on [Archive.today](http://archive.is/).
+A Hubot script for archiving the contents of a URL on [archive.today][archive] (now known as [archive.is][archive]).
 
 See [`src/hubot-archive-today.coffee`](src/hubot-archive-today.coffee) for full documentation.
 
@@ -38,5 +38,8 @@ hubot archive `url` | `archive.new` | Archives the contents of `url` and returns
 
 ```
 user1>> hubot archive https://www.google.com/
-hubot>> user1: https://archive.today/baTKw
+hubot>> user1: https://archive.is/baTKw
 ```
+
+
+[archive]: http://archive.is/

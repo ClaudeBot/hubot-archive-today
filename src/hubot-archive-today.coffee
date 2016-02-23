@@ -1,5 +1,5 @@
 # Description
-#   Archive.today Public API
+#   archive.is Public API (formerly archive.today)
 #
 # Configuration:
 #   None
@@ -14,7 +14,7 @@
 # Author:
 #   MrSaints
 
-ARCHIVE_TODAY_SUBMIT_URL = "https://archive.today/submit/"
+ARCHIVE_TODAY_SUBMIT_URL = "https://archive.is/submit/"
 
 module.exports = (robot) ->
     PATTERNS =
