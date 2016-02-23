@@ -31,7 +31,7 @@ See [`src/hubot-archive-today.coffee`](src/hubot-archive-today.coffee) for full 
 
 Command | Listener ID | Description
 --- | --- | ---
-hubot archive `url` | `archive.new` | Archives the contents of `url` and returns the Archive.today link
+hubot archive `url` | `archive.new` | Archives the contents of `url` and returns the archive.is link
 
 
 ## Sample Interaction

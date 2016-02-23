@@ -5,7 +5,7 @@
 #   None
 #
 # Commands:
-#   hubot archive <url> - Archives the contents of <url> and returns the Archive.today link
+#   hubot archive <url> - Archives the contents of <url> and returns the archive.is link
 #
 # Notes:
 #   TODO: Error checking
